@@ -18,7 +18,7 @@ let selectedOption = null;
 let score = 0;
 
 function showScore() {
-  scoreDiv.textContent = `Score: ${score} / ${currentQuestions.length}`;
+  scoreDiv.textContent = `SCORE: ${score} / ${currentQuestions.length}`;
 }
 
 function shuffle(array) {
