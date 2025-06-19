@@ -79,3 +79,18 @@ body {
     align-items: center;
   }
 }
+
+.fade-in {
+  animation-name: fadein-animation;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

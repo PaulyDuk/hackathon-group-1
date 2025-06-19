@@ -56,6 +56,9 @@ function startCategory(category) {
   currentIndex = 0;
   score = 0;
   quizArea.classList.remove('hidden');
+  quizArea.classList.remove('fade-in');
+  void quizArea.offsetWidth;
+  quizArea.classList.add('fade-in');
   showQuestion();
 }
 
@@ -106,3 +109,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+const faders = document.getElementsByClassName('fader');
+const faderbtns = document.getElementsByClassName('faderbtn');
+
+Array.from(faderbtns).forEach(btn => {
+  btn.addEventListener('click', () => {
+    Array.from(faders).forEach(fader => {
+      fader.classList.remove('fade-in');
+      void fader.offsetWidth;
+      fader.classList.add('fade-in');
+    });
+  });
+});
