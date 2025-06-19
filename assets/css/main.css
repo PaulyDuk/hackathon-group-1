@@ -23,7 +23,7 @@ body {
   cursor: pointer;
 }
 #category-buttons button:hover {
-  background: #005fa3;
+  background: #de07fa;
 }
 #quiz-area {
   margin-top: 2em;
@@ -82,4 +82,59 @@ body {
     flex-direction: column;
     align-items: center;
   }
+}
+
+#category-buttons button {
+  background-color: #5d2a87;
+  color: #fff;
+  border: 4px solid #facb35;
+  border-radius: 8px;
+  padding: 1em 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.5em;
+  transition: background 0.2s, border-color 0.2s;
+  width: 200px; 
+  box-sizing: border-box;
+}
+
+#quiz-area button {
+  background-color: #d19afd;
+  color: #fff;
+  border: 4px solid #facb35;
+  border-radius: 8px;
+  padding: 1em 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.5em 0;
+  transition: background 0.2s, border-color 0.2s;
+  width: 600px; 
+  box-sizing: border-box;
+}
+
+.oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+#category-buttons button,
+#quiz-area button {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 1.4em;
+  padding: 0.5em 1em;
+}
+
+p {
+  font-family: 'Oswald', Arial, sans-serif;
+  max-width: 850px;   
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5em;        
+  padding-right: 1.5em;
+  text-align: center;
+  font-size: 1.5em;
 }
