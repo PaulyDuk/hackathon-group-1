@@ -96,8 +96,17 @@ document.addEventListener('DOMContentLoaded', function() {
   if (mainContent) mainContent.style.display = 'none';
 
   startBtn.addEventListener('click', function() {
-    overlay.style.display = 'none';
-    if (mainContent) mainContent.style.display = '';
+    overlay.classList.add('fade-out');
+    if (mainContent) {
+      mainContent.style.display = '';
+      mainContent.classList.remove('fade-in');
+      void mainContent.offsetWidth;
+      mainContent.classList.add('fade-in');
+    }
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      overlay.classList.remove('fade-out');
+    }, 700);
   });
 
   instructionsBtn.addEventListener('click', function() {
@@ -111,6 +120,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const faders = document.getElementsByClassName('fader');
 const faderbtns = document.getElementsByClassName('faderbtn');
+
+
 
 Array.from(faderbtns).forEach(btn => {
   btn.addEventListener('click', () => {
