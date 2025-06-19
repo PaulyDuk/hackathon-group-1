@@ -10,9 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="intro-overlay" class="overlay">
-    <button id="start-quiz-btn">Start Quiz</button>
-    <button id="instructions-btn">Instructions</button>
+  <div id="intro-overlay" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#5d2a87;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <img src="assets/images/pubtastic-logo.jpg" alt="Quiz Logo" class="img-fluid mb-3" style="max-width:400px;">
+    <button id="start-quiz-btn" style="margin:1em;padding:1em 2em;">START QUIZ</button>
+    <button id="instructions-btn" style="margin:1em;padding:1em 2em;">INSTRUCTIONS</button>
   </div>
 
   <!-- LS - Modal for instructions -->
@@ -20,8 +21,11 @@
     <div id="modal-inner">
       <h2>How to Play</h2>
       <p>
+
+        CHOOSE A TOPIC THEN CLICK ON YOUR SLECTED ANSWER - YOUR SCORE IS SHOWN IN REAL TIME!
         Choose a topic, answer the questions, and see your score at the end!
         <!-- Add more instructions as needed -->
+
       </p>
       <button id="close-modal-btn">Close</button>
     </div>
