@@ -12,19 +12,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-#category-buttons button {
-  margin: 0.5em;
-  padding: 0.7em 1.5em;
-  font-size: 1em;
-  border: none;
-  border-radius: 4px;
-  background: #0078d7;
-  color: #fff;
-  cursor: pointer;
-}
-#category-buttons button:hover {
-  background: #de07fa;
-}
+
 #quiz-area {
   margin-top: 2em;
 }
@@ -78,8 +66,69 @@ body {
   gap: 1em;
 }
 
-.category-flex button {
-  /* Your existing button styles */
+#intro-overlay {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:#7a006f;
+  z-index:1000;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+#main-content {
+  background-color: #7a006f;
+  color: #fff;
+  opacity: 0;
+}
+
+#main-content.fade-in {
+  opacity: 1;
+  transition: opacity 700ms;
+}
+
+#instructions-modal {
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.5);
+  z-index:1100;
+  align-items:center;
+  justify-content:center;
+}
+
+#modal-inner {
+  background:#d400c3;
+  padding:2em;
+  border-radius:8px;
+  max-width:400px;
+  text-align:center;
+  position:relative;
+}
+
+#close-modal-btn {
+   margin-top:1em;
+}
+
+#pub-logo {
+  max-width:750px;
+}
+
+#start-quiz-btn {
+   margin:1em;
+   padding:1em 2em;
+}
+
+#instructions-btn {
+   margin:1em;
+   padding:1em 2em;
 }
 
 /* Stack vertically on small screens */
@@ -87,6 +136,36 @@ body {
   .category-flex {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.fade-in {
+  animation-name: fadein-animation;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+.fade-out {
+  animation-name: fadeout-animation;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -105,6 +184,10 @@ body {
   box-sizing: border-box;
 }
 
+#category-buttons button:hover {
+  background: #de07fa;
+}
+
 #quiz-area button {
   background-color: #9901d4;
   color: #fff;
@@ -120,10 +203,10 @@ body {
   box-sizing: border-box;
 }
 
-.oswald-<uniquifier> {
+.oswald-unique {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 500;
   font-style: normal;
 }
 
