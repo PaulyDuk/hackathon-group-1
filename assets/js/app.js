@@ -81,3 +81,28 @@ sportBtn.onclick = () => startCategory('Sport');
 musicBtn.onclick = () => startCategory('Music');
 foodBtn.onclick = () => startCategory('Food and Drink');
 
+document.addEventListener('DOMContentLoaded', function() {
+  const overlay = document.getElementById('intro-overlay');
+  const startBtn = document.getElementById('start-quiz-btn');
+  const instructionsBtn = document.getElementById('instructions-btn');
+  const modal = document.getElementById('instructions-modal');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  const mainContent = document.querySelector('#main-content'); // Replace with your main quiz container's selector
+
+  // Hide main content initially
+  if (mainContent) mainContent.style.display = 'none';
+
+  startBtn.addEventListener('click', function() {
+    overlay.style.display = 'none';
+    if (mainContent) mainContent.style.display = '';
+  });
+
+  instructionsBtn.addEventListener('click', function() {
+    modal.style.display = 'flex';
+  });
+
+  closeModalBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+  });
+});
+
