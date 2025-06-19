@@ -54,57 +54,10 @@ The application to be structured to provide:
     <li>selection of 'rules' lanuches modal setting out how to play</li>
     <li>selection of 'start' launches selection of subject matter categories</li>
     <li>each category, on selection, launching a series of subject related multiple choice questions</li>
-    <li>the user's score tallied in real-time as answers to each question are selected</li>
+    <li>the user's score tallied in real-time as answers to each question are slected</li>
   </ul>
  Upon completion of any particular category user may select 'End' or select a new category to complete. Scores from each completed category dsiplayed. 
 <br><br>
 
 <h1 id="wireframes">WIREFRAMES</h1>
 In accordance strcuture and responsiveness requirements, wireframes showing
-<br><br>
-
-<h1 id="user-stories">USER STORIES</h1>
-<ul>
-<li>As a user, I want to select an answer from multiple choices so that I can participate in the quiz easily.</li>
-
-<li>As a user, I want to receive immediate feedback after answering a question so that I know if I was correct or not.</li>
-
-<li>As a user, I want to see my total score at the end of the quiz so that I can measure my performance.</li>
-
-<li>As a user, I want the quiz to be responsive so that I can play on both desktop and mobile devices.</li>
-
-<li>As a user, I want to be able to restart the quiz so that I can try again and improve my score.</li>
-</ul>
-<br><br>
-
-<h1 id="design">UI/UX Design</h1>
-We decided to go for a bright colourful design to make the site appear more playful. Given we were working with a single page site we thought bold colours would be the best option to make it more vibrant and visually pleasing.
-<br><br>
-
-<h1 id="features">Features</h1>
-The site initially opens to a start and rules page, with the rules opening a modal to explain how to play. Once you click start you are presented with the main interface of the quiz. There are several options for different categories and clicking on one will start the quiz with the questions and score appearing below. There are 10 questions for each category and the score updates as the user proceeds with the quiz
-<br><br>
-
-<h1 id="ai">AI Implementation</h1>
-<br><br>
-
-<h1 id="testing">Testing & Validation</h1>
-Continious deployment and testing was completed throughout the project lifecycle. By quickly deploying the project to Github pages we could instantly get feedback on any issues that appeared. This continious development is vital as what we see locally is not always what appears when deployed. This also meant that our code was merged into the main branch for others to work from.
-<br><br>
-
-<h2 id="html-validation">HTML Validation</h2>
-<br>
-
-<h2 id="css-validation">CSS Validation</h2>
-<br>
-
-<h2 id="lighthouse">Lighthouse</h2>
-<br><br>
-
-<h1 id="conclusion">Conclusion</h1>
-<br><br>
-
-<h1 id="credits">Credits</h1>
-
-- [Code Insitute](https://codeinstitute.net/) - For providing the training to build this website
-- [Bootstrap](https://getbootstrap.com/) - For the responsive site layout tools
