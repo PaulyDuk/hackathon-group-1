@@ -72,10 +72,6 @@ body {
   gap: 1em;
 }
 
-.category-flex button {
-  /* Your existing button styles */
-}
-
 /* Stack vertically on small screens */
 @media (max-width: 600px) {
   .category-flex {
