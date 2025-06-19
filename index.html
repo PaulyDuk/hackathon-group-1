@@ -10,39 +10,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="intro-overlay" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#5d2a87;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-    <button id="start-quiz-btn" style="margin:1em;padding:1em 2em;">Start Quiz</button>
-    <button id="instructions-btn" style="margin:1em;padding:1em 2em;">Instructions</button>
+  <div id="intro-overlay" class="overlay">
+    <button id="start-quiz-btn">Start Quiz</button>
+    <button id="instructions-btn">Instructions</button>
   </div>
 
   <!-- LS - Modal for instructions -->
+
   <div id="instructions-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:1100;align-items:center;justify-content:center;">
     <div style="background:#d400c3;padding:2em;border-radius:8px;max-width:400px;text-align:center;position:relative;">
       <h2><strong>HOW TO PLAY</strong></h2>
+  <div id="instructions-modal">
+    <div id="modal-inner">
+      <h2>How to Play</h2>
       <p>
         CHOOSE A TOPIC THEN CLICK ON YOUR SLECTED ANSWER - YOUR SCORE IS SHOWN IN REAL TIME!
         <!-- Add more instructions as needed -->
       </p>
       <button id="close-modal-btn" style="margin-top:1em;">CLOSE</button>
+      <button id="close-modal-btn">Close</button>
     </div>
   </div>
 <!-- LS - Jumbotron -->
-  <div class="container" style="background-color: #5d2a87; color: #fff;">
-    <div class="p-1 rounded mb-4 text-center" style="background-color: #5d2a87; color: #fff;">
-      <img src="assets/images/pubtastic-logo.jpg" alt="Quiz Logo" class="img-fluid mb-3" style="max-width:450px;">
+  <div id="main-content" class="container">
+    <div class="bg-light p-5 rounded mb-4 text-center">
+      <img src="assets/images/pubtastic-logo.jpg" id="pub-logo" alt="Quiz Logo" class="img-fluid mb-3">
     </div>
     <p>WELCOME TO THE <strong>PUBTASTIC QUIZATHON</strong> WHERE WE TEST YOUR KNOWLEDGE ON A RANGE OF TOPICS VITAL FOR
        THE SURVIVAL OF HUMANKIND ........ PICK A TOPIC, SELECT YOUR ANSWER AND WATCH YOUR SCORE TOT
        UP IN REAL TIME -  ABOVE ALL - HAVE FUN!</p>
     <div id="category-buttons" class="category-flex">
-      <button id="tv-btn" class="img-btn tv-btn">TV</button>
-      <button id="film-btn" class="img-btn film-btn">FILM</button>
-      <button id="sport-btn">SPORT</button>
-      <button id="music-btn">MUSIC</button>
-      <button id="food-btn">FOOD & DRINK</button>
+      <button id="tv-btn" class="img-btn tv-btn faderbtn">TV</button>
+      <button id="film-btn" class="img-btn film-btn faderbtn">FILM</button>
+      <button id="sport-btn" class="faderbtn">SPORT</button>
+      <button id="music-btn" class="faderbtn">MUSIC</button>
+      <button id="food-btn" class="faderbtn">FOOD & DRINK</button>
     </div>
     
-    <div id="quiz-area" class="hidden">
+    <div id="quiz-area" class="hidden fader">
       <div id="score"></div>
       <div id="question"></div>
       <div id="options"></div>
