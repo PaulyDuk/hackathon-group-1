@@ -21,10 +21,18 @@ function showScore() {
   scoreDiv.textContent = `Score: ${score} / ${currentQuestions.length}`;
 }
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 function showQuestion() {
   const q = currentQuestions[currentIndex];
   questionDiv.textContent = q.question;
   optionsDiv.innerHTML = '';
+  shuffle(q.options);
   q.options.forEach(option => {
     const btn = document.createElement('button');
     btn.textContent = option;
@@ -44,6 +52,7 @@ function showQuestion() {
 function startCategory(category) {
   currentCategory = category;
   currentQuestions = questions[category];
+  shuffle(currentQuestions);
   currentIndex = 0;
   score = 0;
   quizArea.classList.remove('hidden');
