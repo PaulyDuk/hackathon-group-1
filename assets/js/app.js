@@ -16,6 +16,17 @@ let currentQuestions = [];
 let currentIndex = 0;
 let selectedOption = null;
 let score = 0;
+var myBarWidth = 0;
+var questionsNumber = 10;
+var numberQuestions = questions.length;
+
+function addProgress() {
+    myBarWidth += 100 / currentQuestions.length;
+    if (myBarWidth > 100) {
+        myBarWidth = 100;
+    }
+    document.getElementById("myBar").style.width = myBarWidth + "%";
+}
 
 function showScore() {
   scoreDiv.textContent = `SCORE: ${score} / ${currentQuestions.length}`;
@@ -55,6 +66,8 @@ function startCategory(category) {
   shuffle(currentQuestions);
   currentIndex = 0;
   score = 0;
+  myBarWidth = 0; // Reset progress bar
+  document.getElementById("myBar").style.width = "0%"; // Reset bar visually
   quizArea.classList.remove('hidden');
   quizArea.classList.remove('fade-in');
   void quizArea.offsetWidth;
@@ -70,11 +83,13 @@ nextBtn.onclick = () => {
   currentIndex++;
   if (currentIndex < currentQuestions.length) {
     showQuestion();
+    addProgress();    
   } else {
     questionDiv.textContent = "Quiz complete!";
     optionsDiv.innerHTML = '';
     nextBtn.classList.add('hidden');
     showScore();
+    addProgress();
   }
 };
 
