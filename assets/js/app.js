@@ -12,6 +12,7 @@ const optionsDiv = document.getElementById('options');
 const nextBtn = document.getElementById('next-btn');
 const resultsTableContainer = document.getElementById('results-table-container');
 const resultsTableBody = document.querySelector('#results-table tbody');
+const container = document.querySelector('.container');
 
 let categoryScores = {};
 let currentCategory = '';
@@ -22,6 +23,38 @@ let score = 0;
 var myBarWidth = 0;
 var questionsNumber = 10;
 var numberQuestions = questions.length;
+
+function animateContainerHeight() {
+  // 1. Measure the current height
+  const startHeight = container.offsetHeight;
+
+  // 2. Set the height explicitly to start value
+  container.style.height = startHeight + 'px';
+
+  // 3. Wait for the next frame, then:
+  requestAnimationFrame(() => {
+    // 4. Change the content (already done before calling this function)
+    // 5. Measure the new height
+    container.style.height = 'auto';
+    const endHeight = container.offsetHeight;
+
+    // 6. Set back to start height, force reflow, then set to end height
+    container.style.height = startHeight + 'px';
+    void container.offsetWidth; // Force reflow
+
+    // 7. Now set to the new height for transition
+    container.style.height = endHeight + 'px';
+
+    // 8. After transition, remove the inline height
+    const cleanup = (e) => {
+      if (e.propertyName === 'height') {
+        container.style.height = '';
+        container.removeEventListener('transitionend', cleanup);
+      }
+    };
+    container.addEventListener('transitionend', cleanup);
+  });
+}
 
 function addProgress() {
     myBarWidth += 100 / currentQuestions.length;
@@ -54,11 +87,15 @@ function showQuestion() {
       Array.from(optionsDiv.children).forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       selectedOption = option;
+        animateContainerHeight();
       nextBtn.classList.remove('hidden');
+      animateContainerHeight();
     };
     optionsDiv.appendChild(btn);
   });
+    animateContainerHeight();
   nextBtn.classList.add('hidden');
+  animateContainerHeight();
   selectedOption = null;
   showScore();
 }
@@ -111,9 +148,11 @@ nextBtn.onclick = () => {
         total: currentQuestions.length
       };
     }
+      animateContainerHeight();
     questionDiv.textContent = "Quiz complete!";
     optionsDiv.innerHTML = '';
     nextBtn.classList.add('hidden');
+    animateContainerHeight();
     showScore();
     addProgress();
     showResultsTable(); // Show table at the end
