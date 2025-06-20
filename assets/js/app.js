@@ -10,7 +10,10 @@ const scoreDiv = document.getElementById('score');
 const questionDiv = document.getElementById('question');
 const optionsDiv = document.getElementById('options');
 const nextBtn = document.getElementById('next-btn');
+const resultsTableContainer = document.getElementById('results-table-container');
+const resultsTableBody = document.querySelector('#results-table tbody');
 
+let categoryScores = {};
 let currentCategory = '';
 let currentQuestions = [];
 let currentIndex = 0;
@@ -66,13 +69,28 @@ function startCategory(category) {
   shuffle(currentQuestions);
   currentIndex = 0;
   score = 0;
-  myBarWidth = 0; // Reset progress bar
-  document.getElementById("myBar").style.width = "0%"; // Reset bar visually
+  myBarWidth = 0;
+  document.getElementById("myBar").style.width = "0%";
   quizArea.classList.remove('hidden');
   quizArea.classList.remove('fade-in');
   void quizArea.offsetWidth;
   quizArea.classList.add('fade-in');
+  hideResultsTable(); // Hide table when starting a new quiz
   showQuestion();
+}
+
+function showResultsTable() {
+  resultsTableBody.innerHTML = '';
+  for (const [cat, scoreObj] of Object.entries(categoryScores)) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${cat}</td><td>${scoreObj.score} / ${scoreObj.total}</td>`;
+    resultsTableBody.appendChild(tr);
+  }
+  resultsTableContainer.classList.remove('hidden');
+}
+
+function hideResultsTable() {
+  resultsTableContainer.classList.add('hidden');
 }
 
 nextBtn.onclick = () => {
@@ -85,11 +103,17 @@ nextBtn.onclick = () => {
     showQuestion();
     addProgress();    
   } else {
+    // Save score for this category
+    categoryScores[currentCategory] = {
+      score: score,
+      total: currentQuestions.length
+    };
     questionDiv.textContent = "Quiz complete!";
     optionsDiv.innerHTML = '';
     nextBtn.classList.add('hidden');
     showScore();
     addProgress();
+    showResultsTable(); // Show table at the end
   }
 };
 

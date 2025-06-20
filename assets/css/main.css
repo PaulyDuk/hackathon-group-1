@@ -147,6 +147,10 @@ body {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .fixed-height {
   height: 250px;
   
@@ -278,4 +282,33 @@ p {
     /* transition for smooth animation */
     
     transition: all ease-in-out 0.5s;
+}
+
+#results-table-container {
+  margin-top: 2em;
+  text-align: center;
+}
+
+#results-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  background: #fff;
+  color: #5d2a87;
+  font-family: 'Oswald', Arial, sans-serif;
+}
+
+#results-table th, #results-table td {
+  border: 2px solid #facb35;
+  padding: 0.7em 1em;
+  font-size: 1.2em;
+}
+
+#results-table th {
+  background: #facb35;
+  color: #5d2a87;
+}
+
+#results-table tr:nth-child(even) {
+  background: #f4f4f4;
 }
