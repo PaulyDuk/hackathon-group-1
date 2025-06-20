@@ -12,6 +12,7 @@ body {
   padding: 2em;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 1201px;
 }
 
 /** Consolidated styles from Inline HTML into CSS **/
@@ -78,6 +79,10 @@ body {
 
 #pub-logo {
   max-width:450px;
+}
+
+#pub-logo-small {
+  max-width:300px;
 }
 /** End consolidation **/
 
