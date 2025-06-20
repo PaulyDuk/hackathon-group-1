@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="intro-overlay">
+  <div id="intro-overlay" class="overlay">
     <button id="start-quiz-btn">Start Quiz</button>
     <button id="instructions-btn">Instructions</button>
   </div>
@@ -35,14 +35,14 @@
        THE SURVIVAL OF HUMANKIND ........ PICK A TOPIC, SELECT YOUR ANSWER AND WATCH YOUR SCORE TOT
        UP IN REAL TIME -  ABOVE ALL - HAVE FUN!</p>
     <div id="category-buttons" class="category-flex">
-      <button id="tv-btn" class="img-btn tv-btn">TV</button>
-      <button id="film-btn" class="img-btn film-btn">FILM</button>
-      <button id="sport-btn">SPORT</button>
-      <button id="music-btn">MUSIC</button>
-      <button id="food-btn">FOOD & DRINK</button>
+      <button id="tv-btn" class="img-btn tv-btn faderbtn">TV</button>
+      <button id="film-btn" class="img-btn film-btn faderbtn">FILM</button>
+      <button id="sport-btn" class="faderbtn">SPORT</button>
+      <button id="music-btn" class="faderbtn">MUSIC</button>
+      <button id="food-btn" class="faderbtn">FOOD & DRINK</button>
     </div>
     
-    <div id="quiz-area" class="hidden">
+    <div id="quiz-area" class="hidden fader">
       <div id="score"></div>
       <div id="question"></div>
       <div id="options"></div>
