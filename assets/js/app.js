@@ -103,11 +103,14 @@ nextBtn.onclick = () => {
     showQuestion();
     addProgress();    
   } else {
-    // Save score for this category
-    categoryScores[currentCategory] = {
-      score: score,
-      total: currentQuestions.length
-    };
+    // Only update if new score is higher than previous
+    const prev = categoryScores[currentCategory];
+    if (!prev || score > prev.score) {
+      categoryScores[currentCategory] = {
+        score: score,
+        total: currentQuestions.length
+      };
+    }
     questionDiv.textContent = "Quiz complete!";
     optionsDiv.innerHTML = '';
     nextBtn.classList.add('hidden');
