@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .container {
   max-width: 500px;
   margin: 40px auto;
@@ -12,6 +13,74 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+/** Consolidated styles from Inline HTML into CSS **/
+#intro-overlay {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:#5d2a87;
+  z-index:1000;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+#start-quiz-btn {
+   margin:1em;
+   padding:1em 2em;
+}
+
+#instructions-btn {
+   margin:1em;
+   padding:1em 2em;
+}
+
+#instructions-modal {
+  font-family: 'Oswald', Arial, sans-serif;
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.5);
+  z-index:1100;
+  align-items:center;
+  justify-content:center;
+}
+
+#modal-inner {
+  background:#d400c3;
+  padding:2em;
+  border-radius:8px;
+  max-width:400px;
+  text-align:center;
+  position:relative;
+}
+
+#close-modal-btn {
+   margin-top:1em;
+}
+
+#main-content {
+  background-color: #5d2a87;
+  color: #fff;
+}
+
+#logo-background {
+  background-color: #5d2a87; 
+  color: #fff;
+}
+
+#pub-logo {
+  max-width:450px;
+}
+/** End consolidation **/
+
 #category-buttons button {
   margin: 0.5em;
   padding: 0.7em 1.5em;
@@ -22,16 +91,20 @@ body {
   color: #fff;
   cursor: pointer;
 }
+
 #category-buttons button:hover {
   background: #de07fa;
 }
+
 #quiz-area {
   margin-top: 2em;
 }
+
 #question {
   font-size: 1.2em;
   margin-bottom: 1em;
 }
+
 #options button {
   display: block;
   margin: 0.5em 0;
@@ -43,10 +116,12 @@ body {
   cursor: pointer;
   text-align: left;
 }
+
 #options button.selected {
   background: #de07fa;
   border-color: #facb35;
 }
+
 #next-btn {
   margin-top: 1em;
   padding: 0.7em 1.5em;
@@ -63,6 +138,7 @@ body {
   margin-right: auto;
   display: block;
 }
+
 #next-btn.hidden, #quiz-area.hidden {
   display: none;
 }
@@ -77,10 +153,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-}
-
-.category-flex button {
-  /* Your existing button styles */
 }
 
 /* Stack vertically on small screens */
@@ -121,10 +193,10 @@ body {
   box-sizing: border-box;
 }
 
-.oswald-<uniquifier> {
+.oswald-unique {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -162,10 +234,6 @@ p {
 #score,
 #options {
   text-align: center;
-}
-
-#instructions-modal {
-  font-family: 'Oswald', Arial, sans-serif;
 }
 
 #category-buttons button,
