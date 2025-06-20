@@ -220,8 +220,8 @@ export const questions = {
   "Food and Drink": [
     {
       question: "Name the hottest chilli pepper in the world.",
-      options: ["Carolina Reaper", "Ghost Pepper", "Trinidad Scorpion", "Pepper X"],
-      answer: "Pepper X"
+      options: ["Carolina Reaper", "Ghost Pepper", "Trinidad Scorpion", "Habanero"],
+      answer: "Carolina Reaper"
     },
     {
       question: "Which soft drink is commonly associated with Scotland?",

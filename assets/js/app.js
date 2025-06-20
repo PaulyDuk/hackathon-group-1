@@ -18,21 +18,13 @@ let selectedOption = null;
 let score = 0;
 
 function showScore() {
-  scoreDiv.textContent = `Score: ${score} / ${currentQuestions.length}`;
-}
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
+  scoreDiv.textContent = `SCORE: ${score} / ${currentQuestions.length}`;
 }
 
 function showQuestion() {
   const q = currentQuestions[currentIndex];
   questionDiv.textContent = q.question;
   optionsDiv.innerHTML = '';
-  shuffle(q.options);
   q.options.forEach(option => {
     const btn = document.createElement('button');
     btn.textContent = option;
@@ -52,13 +44,9 @@ function showQuestion() {
 function startCategory(category) {
   currentCategory = category;
   currentQuestions = questions[category];
-  shuffle(currentQuestions);
   currentIndex = 0;
   score = 0;
   quizArea.classList.remove('hidden');
-  quizArea.classList.remove('fade-in');
-  void quizArea.offsetWidth;
-  quizArea.classList.add('fade-in');
   showQuestion();
 }
 
@@ -96,17 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (mainContent) mainContent.style.display = 'none';
 
   startBtn.addEventListener('click', function() {
-    overlay.classList.add('fade-out');
-    if (mainContent) {
-      mainContent.style.display = '';
-      mainContent.classList.remove('fade-in');
-      void mainContent.offsetWidth;
-      mainContent.classList.add('fade-in');
-    }
-    setTimeout(() => {
-      overlay.style.display = 'none';
-      overlay.classList.remove('fade-out');
-    }, 700);
+    overlay.style.display = 'none';
+    if (mainContent) mainContent.style.display = '';
   });
 
   instructionsBtn.addEventListener('click', function() {
@@ -118,17 +97,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-const faders = document.getElementsByClassName('fader');
-const faderbtns = document.getElementsByClassName('faderbtn');
-
-
-
-Array.from(faderbtns).forEach(btn => {
-  btn.addEventListener('click', () => {
-    Array.from(faders).forEach(fader => {
-      fader.classList.remove('fade-in');
-      void fader.offsetWidth;
-      fader.classList.add('fade-in');
-    });
-  });
-});
