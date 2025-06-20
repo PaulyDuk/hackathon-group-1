@@ -257,3 +257,21 @@ p {
   from { opacity: 1; }
   to   { opacity: 0; }
 }
+
+#myProgress {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+#myBar {
+    height: 30px;
+    background-color: #facb35;
+    border-radius: 8px;
+    /* width of the bar set initially to 0% to hide it */
+    
+    width: 0%;
+    /* transition for smooth animation */
+    
+    transition: all ease-in-out 0.5s;
+}
