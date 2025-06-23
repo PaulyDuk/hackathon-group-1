@@ -108,3 +108,5 @@ Continious deployment and testing was completed throughout the project lifecycle
 
 - [Code Insitute](https://codeinstitute.net/) - For providing the training to build this website
 - [Bootstrap](https://getbootstrap.com/) - For the responsive site layout tools
+- [Flaticon](https://www.flaticon.com/) - Question mark icon by Freepik
+- [favicon](https://favicon.io//) - Favicon generation
