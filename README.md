@@ -4,7 +4,7 @@ Image placeholder
 <br>
 <h2 align="center">Welcome to the readme of the PubTastic Quizathon, the first group hackathon for Code Institute</h2>
 <br>
-<h2 align="center">Website Link | Project Board</h2>
+<h2 align="center"><a href="https://paulyduk.github.io/hackathon-group-1/">Website Link | <a href="https://github.com/users/PaulyDuk/projects/5">Project Board</a></h2>
 <h1>Table of Contents</h1>
 <ol>
 <li><a href="#introduction">Introduction</a></li>
@@ -78,11 +78,17 @@ In accordance strcuture and responsiveness requirements, wireframes showing
 <br><br>
 
 <h1 id="design">UI/UX Design</h1>
-We decided to go for a bright colourful design to make the site appear more playful. Given we were working with a single page site we thought bold colours would be the best option to make it more vibrant and visually pleasing.
+We decided to go for a bright colourful design to make the site appear more playful. Given we were working with a single page site we thought bold colours would be the best option to make it more vibrant and visually pleasing. We decided to go with a fade animation between the welcome page and the main content so it was not a jarring experience loading the quiz, we also used this fade animation between questions to keep consistency and provide pleasing visuals. We also decided to have the the main content of the quiz initially hidden until a quiz is selected, which is also true for the next button once a question had been answered. It was chosen that the bottom of the quiz container would smoothly accomodate this by expanding and contracting depending on the content on the page.
+<br><br>
+As users progress through the quiz a progress bar will show their progress through the 10 questions of the chosen category. It was decided that we would not add a previous/go-back button to avoid the user "cheating" the quiz to get the maximum score each time by going back to get the correct answer.
+<br><br>
+The quiz results will also only show the best results of quizzes that have been completed and expand as new entries are added, keeping a clean design without additional clutter of quizzes not yet scored. 
 <br><br>
 
 <h1 id="features">Features</h1>
-The site initially opens to a start and rules page, with the rules opening a modal to explain how to play. Once you click start you are presented with the main interface of the quiz. There are several options for different categories and clicking on one will start the quiz with the questions and score appearing below. There are 10 questions for each category and the score updates as the user proceeds with the quiz
+The site initially opens to a start and rules page, with the rules opening a modal to explain how to play. Once you click start quiz you are presented with the main interface of the quiz. There are several options for different categories and clicking on one will start the quiz with the question, answer, progress and score appearing below. There are 10 questions for each category and the score updates automatically as the user proceeds with the quiz, along with the progress bar.
+<br><br>
+Once the quiz has been completed it will show a quiz complete page and the score in a table for that particular quiz. At this stage the user can click on the quiz again and this will randomise the order of the questions, as well as the location of the answers so that people will not be able to memorise the order. The user can also choose a different category and run through the 10 questions. Once completed the result will be added to the table for that particular catergory. The best results table will only update if the user scores higher than their previous attempt, otherwise it will remain the same as the previous score.
 <br><br>
 
 <h1 id="ai">AI Implementation</h1>
@@ -109,4 +115,4 @@ Continious deployment and testing was completed throughout the project lifecycle
 - [Code Insitute](https://codeinstitute.net/) - For providing the training to build this website
 - [Bootstrap](https://getbootstrap.com/) - For the responsive site layout tools
 - [Flaticon](https://www.flaticon.com/) - Question mark icon by Freepik
-- [favicon](https://favicon.io//) - Favicon generation
+- [favicon](https://favicon.io/) - Favicon generation
