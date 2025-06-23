@@ -1,6 +1,6 @@
 <h1 align="center" id="top">PubTastic Quizathon</h1>
 <br>
-Image placeholder
+<img src="docs/home.png">
 <br>
 <h2 align="center">Welcome to the readme of the PubTastic Quizathon, the first group hackathon for Code Institute</h2>
 <br>
