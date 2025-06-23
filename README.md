@@ -13,24 +13,21 @@ Image placeholder
 <li><a href="#structure">Structure & Concepts</a></li>
 </ul>
 <li><a href="#wireframes">Wireframes</a></li>
+<ul>
+<li><a href="#phone">Phone</a></li>
+<li><a href="#tablet">Tablet</a></li>
+<li><a href="#pc">Desktop</a></li>
+</ul>
 <li><a href="#user-stories">User Stories</a></li>
 <li><a href="#design">UI/UX Design</a></li>
-<ul>
-<li><a href="#colour-design">Colour Design</a></li>
-<li><a href="#fonts">Fonts</a></li>
-<li><a href="#images">Images</a></li>
-</ul>
 <li><a href="#features">Features</a></li>
-<ul>
-<li><a href="#cards">Cards</a></li>
-</ul>
 <li><a href="#ai">AI Implementation</a></li>
 <li><a href="#testing">Testing and Validation</a></li>
 <ul>
 <li><a href="#html-validation">HTML Validation</a></li>
 <li><a href="#css-validation">CSS Validation</a></li>
 <li><a href="#lighthouse">Lighthouse</a></li>
-<li><a href="#contrast1">Card/Text Contrast Score</a></li>
+<li><a href="#contrast">Contrast Checker</a></li>
 </ul>
 <li><a href="#conclusion">Project Conclusion</a></li>
 <li><a href="#credits">Credits</a></li>
@@ -48,19 +45,31 @@ All in accordance with global standards.
 <br><br>
 
 <h1 id="structure">Structure & Concept</h1>
-The application to be structured to provide:
+The application to be structured to provide:<br><br>
 <ul>
     <li> an initial presentation of 'rules' and 'start' options to user;</li>
     <li>selection of 'rules' lanuches modal setting out how to play</li>
     <li>selection of 'start' launches selection of subject matter categories</li>
     <li>each category, on selection, launching a series of subject related multiple choice questions</li>
     <li>the user's score tallied in real-time as answers to each question are selected</li>
-  </ul>
- Upon completion of any particular category user may select 'End' or select a new category to complete. Scores from each completed category dsiplayed. 
+  </ul><br>
+ Upon completion of any particular category the user may select the same category to increase their score, or choose another category to play. The users score will show at the end of the quiz alongside their highest score for each category
 <br><br>
 
 <h1 id="wireframes">Wireframes</h1>
-In accordance strcuture and responsiveness requirements, wireframes showing
+Wireframes were made for each display size and are shown below, these were later updated with the color scheme but the basic design did not change from our initial design
+<br><br>
+<h2 id="phone">Phone:</h2>
+<br>
+<img src="docs/mobile_wireframe.jpeg">
+<br>
+<h2 id="tablet">Tablet:</h2>
+<br>
+<img src="docs/tablet_wireframe.jpeg">
+<br>
+<h2 id="pc">Desktop:</h2>
+<br>
+<img src="docs/desktop_wireframe.jpeg">
 <br><br>
 
 <h1 id="user-stories">User Stories</h1>
@@ -75,14 +84,14 @@ In accordance strcuture and responsiveness requirements, wireframes showing
 
 <li>As a user, I want to be able to restart the quiz so that I can try again and improve my score.</li>
 </ul>
-<br><br>
+<br>
 
 <h1 id="design">UI/UX Design</h1>
 We decided to go for a bright colourful design to make the site appear more playful. Given we were working with a single page site we thought bold colours would be the best option to make it more vibrant and visually pleasing. We decided to go with a fade animation between the welcome page and the main content so it was not a jarring experience loading the quiz, we also used this fade animation between questions to keep consistency and provide pleasing visuals. We also decided to have the the main content of the quiz initially hidden until a quiz is selected, which is also true for the next button once a question had been answered. It was chosen that the bottom of the quiz container would smoothly accomodate this by expanding and contracting depending on the content on the page.
 <br><br>
-As users progress through the quiz a progress bar will show their progress through the 10 questions of the chosen category. It was decided that we would not add a previous/go-back button to avoid the user "cheating" the quiz to get the maximum score each time by going back to get the correct answer.
+As users progress through the quiz a progress bar will show their progress through the 10 questions of the chosen category. It was decided that we would not add a previous/go-back button to avoid the user "cheating" the quiz to get the maximum score each time by going back to get the correct answer. This encourages the player to play again to improve their score.
 <br><br>
-The quiz results will also only show the best results of quizzes that have been completed and expand as new entries are added, keeping a clean design without additional clutter of quizzes not yet scored. 
+The quiz results will also only show the best results of quizzes that have been completed and expand as new entries are added, keeping a clean design without additional clutter of quizzes not yet scored. We were mindful of this with the mobile first approach. 
 <br><br>
 
 <h1 id="features">Features</h1>
@@ -95,16 +104,32 @@ Once the quiz has been completed it will show a quiz complete page and the score
 <br><br>
 
 <h1 id="testing">Testing & Validation</h1>
-Continious deployment and testing was completed throughout the project lifecycle. By quickly deploying the project to Github pages we could instantly get feedback on any issues that appeared. This continious development is vital as what we see locally is not always what appears when deployed. This also meant that our code was merged into the main branch for others to work from.
+Continious deployment and testing was completed throughout the project lifecycle. By quickly deploying the project to Github pages we could instantly gain feedback on any issues that appeared. This continious development is vital as what we see locally is not always what appears when deployed online via Github. This also meant that our code was merged into the main branch for others to work from so we had a consistent baseline and to minimise any merge conflicts. Communication between the team was vital during these times. Testing was always done with a mobile first approach, before tablets and finally desktops. This was crucial as designing the quiz to work on mobile was the hardest initial challenge in regards to the layout and responsiveness of the site.
 <br><br>
 
 <h2 id="html-validation">HTML Validation</h2>
+HTML Validation passes successfully with no errors:
+<br><br>
+<img src="docs/html_validation.png" alt="HTML Validation">
 <br>
 
 <h2 id="css-validation">CSS Validation</h2>
+CSS Validation passes successfully with no errors:
+<br><br>
+<img src="docs/css_validation.png" alt="CSS Validation">
 <br>
 
+
 <h2 id="lighthouse">Lighthouse</h2>
+Lighthouse scores a perfect 100% due to the lightweight design of the site:
+<br><br>
+<img src="docs/lighthouse.png" alt="CSS Validation">
+<br>
+
+<h2 id="contrast">Contrast Checker</h2>
+Contrast checker passes for our text against our background:
+<br><br>
+<img src="docs/contrast.png" alt="Contrast Checker">
 <br><br>
 
 <h1 id="conclusion">Conclusion</h1>
@@ -116,3 +141,5 @@ Continious deployment and testing was completed throughout the project lifecycle
 - [Bootstrap](https://getbootstrap.com/) - For the responsive site layout tools
 - [Flaticon](https://www.flaticon.com/) - Question mark icon by Freepik
 - [favicon](https://favicon.io/) - Favicon generation
+- [Google Fonts](https://fonts.google.com/) - Font library used
+- [Sqoosh](https://squoosh.app/) - Used for image compression
