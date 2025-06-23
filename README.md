@@ -3,7 +3,6 @@
 <img src="docs/home.png">
 <br>
 <h2 align="center">Welcome to the readme of the PubTastic Quizathon, the first group hackathon for Code Institute</h2>
-<br>
 <h2 align="center"><a href="https://paulyduk.github.io/hackathon-group-1/">Website Link | <a href="https://github.com/users/PaulyDuk/projects/5">Project Board</a></h2>
 <h1>Table of Contents</h1>
 <ol>
@@ -39,7 +38,8 @@ This project is an assessed output that forms an element of the Code Institute F
 
 <h1 id="requirements">Requirements</h1>  
 Collaboratively design and implement a one-page interactive front-end web application using HTML, CSS, and JavaScript focusing on user experience design, accessibility, and responsive DOM manipulation.
-Application to meet accessibility guidelines and UX design principles; responsive front-end using flexbox/bootstrap, custom HTML and CSS with structured layout, navigation and graphics including semantic HTML and avoiding WCAG errors based on wireframes/mockups. 
+Application to meet accessibility guidelines and UX design principles; responsive front-end using flexbox/bootstrap, custom HTML and CSS with structured layout, navigation and graphics including semantic HTML and avoiding WCAG errors based on wireframes/mockups.
+<br><br> 
 Include JavaScript allowing user control and feedback for effective DOM manipulation, dynamically updating the interface. JavaScript functionality including dynamic updates and user interaction. Effective DOM manipulation of at least two elements to reflect changes in real-time based on user actions.
 All in accordance with global standards. 
 <br><br>
@@ -101,6 +101,13 @@ Once the quiz has been completed it will show a quiz complete page and the score
 <br><br>
 
 <h1 id="ai">AI Implementation</h1>
+The Pubtastic Quizathon used the team's skills in combination with AI in a number of key areas:
+<ul>
+<li>Imagery - the images were developed using a Freepik AI image and graphics generation account, iterating designs and color schemes to achieve the desired result.</li>
+<li>Code Assistance - AI was used in different instances to support learning in the application of code in all areas as appropriate - this included HTML, CSS, and JavaScript. Iteration and defining clear concise prompts was critical for getting the correct assistance from AI</li>
+<li>Debugging - AI was very useful in helping to identify the basis for areas where functionality was not as expected, and allowing different approaches or be used to eliminate those issues. It also served as a learning tool during that process when paricular code segments were not particularly clear.</li>
+</ul>
+AI is a fantastic tool but is not a replacement for a developer who does not understand the code that is generated. Duplicate segments of code had to be removed during iterations as well as moving inline CSS styles that it preferred to a separate CSS file.
 <br><br>
 
 <h1 id="testing">Testing & Validation</h1>
@@ -133,6 +140,11 @@ Contrast checker passes for our text against our background:
 <br><br>
 
 <h1 id="conclusion">Conclusion</h1>
+The design and format of the interactive Hackathon provides a unique opportunity for learners to take their first steps into collaborating on a project and getting to grips with Github as a collaborative tool. It also provides the group working together on the project the opportunity to hone their interpersonal skills, learn to interact co-operatively and supportively to enjoy their work time.
+<br><br>
+The group responsible for the Pubtastic Quizathon struck up a cordial but relaxed rapport that allowed each individual to contribute successfully to the whole; despite some initial teething problems with managing version control, the team ultimately learned a considerable amount surrounding the practicalities of working in teams and groups and how to consider approaches that minimise conflicts and enhance efficiency.
+<br><br>
+We particularly enjoyed learning this together and once the initial issues with merge conflicts was resolved we found it insightful to how we would work in teams in larger projects.
 <br><br>
 
 <h1 id="credits">Credits</h1>
