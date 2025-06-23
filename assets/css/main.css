@@ -42,29 +42,61 @@ body {
 
 #instructions-modal {
   font-family: 'Oswald', Arial, sans-serif;
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  background:rgba(0,0,0,0.5);
-  z-index:1100;
-  align-items:center;
-  justify-content:center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(93, 42, 135, 0.95); /* semi-transparent main purple */
+  z-index: 1100;
+  align-items: center;
+  justify-content: center;
 }
 
 #modal-inner {
-  background:#d400c3;
-  padding:2em;
-  border-radius:8px;
-  max-width:400px;
-  text-align:center;
-  position:relative;
+  background: #5d2a87;
+  padding: 2em 2.5em;
+  border-radius: 16px;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  border: 4px solid #facb35;
+  color: #facb35;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+#modal-inner h2 {
+  color: #facb35;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+}
+
+#modal-inner p {
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 2em;
 }
 
 #close-modal-btn {
-   margin-top:1em;
+  background-color: #facb35;
+  color: #5d2a87;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 1.53em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s, color 0.2s;
+}
+
+#close-modal-btn:hover {
+  background-color: #fff;
+  color: #5d2a87;
 }
 
 #main-content {
@@ -311,4 +343,28 @@ p {
 
 #results-table tr:nth-child(even) {
   background: #f4f4f4;
+}
+
+.faderbtn {
+  background-color: #5d2a87;
+  color: #facb35;
+  border: 4px solid #facb35;
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.5em auto;
+  display: block;
+  transition: background 0.2s, border-color 0.2s;
+  width: auto; /* or your preferred width */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#intro-overlay .faderbtn {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 1.5em;
+  color: #ffffff;
 }
