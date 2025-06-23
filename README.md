@@ -58,7 +58,7 @@ The application to be structured to provide:<br><br>
 
 <h1 id="wireframes">Wireframes</h1>
 Wireframes were made for each display size and are shown below, these were later updated with the color scheme but the basic design did not change from our initial design
-<br><br>
+<br>
 <h2 id="phone">Phone:</h2>
 <br>
 <img src="docs/mobile_wireframe.jpeg">
